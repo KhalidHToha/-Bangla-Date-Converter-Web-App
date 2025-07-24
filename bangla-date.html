@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bangla Date Converter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-6 rounded-xl shadow-md w-full max-w-md text-center">
+      <h2 class="text-xl font-semibold mb-4">📅 বাংলা তারিখ কনভার্টার</h2>
+
+      <input
+        type="date"
+        id="engDate"
+        class="w-full px-4 py-2 border rounded mb-4"
+      />
+      <button
+        onclick="convertDate()"
+        class="bg-blue-600 text-white px-4 py-2 w-full rounded hover:bg-blue-700"
+      >
+        কনভার্ট করো
+      </button>
+
+      <p id="result" class="mt-4 text-xl font-bold text-green-700"></p>
+    </div>
+
+    <script>
+      const banglaNumbers = ["০", "১", "২", "৩", "৪", "৫", "৬", "৭", "৮", "৯"];
+      const banglaMonths = [
+        "বৈশাখ",
+        "জ্যৈষ্ঠ",
+        "আষাঢ়",
+        "শ্রাবণ",
+        "ভাদ্র",
+        "আশ্বিন",
+        "কার্তিক",
+        "অগ্রহায়ণ",
+        "পৌষ",
+        "মাঘ",
+        "ফাল্গুন",
+        "চৈত্র",
+      ];
+
+      function convertNumberToBangla(num) {
+        return num
+          .toString()
+          .split("")
+          .map((d) => banglaNumbers[d] || d)
+          .join("");
+      }
+
+      function convertDate() {
+        const dateInput = document.getElementById("engDate").value;
+        if (!dateInput) return alert("তারিখ দিন");
+
+        const date = new Date(dateInput);
+        const banglaYear = date.getFullYear() - 593; // approx
+        const banglaMonth = banglaMonths[date.getMonth()];
+        const banglaDay = convertNumberToBangla(date.getDate());
+
+        const result = `${banglaDay} ${banglaMonth} ${convertNumberToBangla(
+          banglaYear
+        )}`;
+        document.getElementById("result").textContent = result;
+      }
+    </script>
+  </body>
+</html>
