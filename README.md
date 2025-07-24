@@ -15,7 +15,7 @@ A simple and educational web app to convert English dates to Bangla (Bengali) da
 
 ## 🌐 Live Demo
 
-> <a herf="https://khalidhtoha.github.io/-Bangla-Date-Converter-Web-App/bangla-date.html">Click to Visit</a>
+> (https://khalidhtoha.github.io/-Bangla-Date-Converter-Web-App/bangla-date.html)
 
 ---
 
