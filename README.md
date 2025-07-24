@@ -1,6 +1,6 @@
 # 📅 Bangla Date Converter
 
-A simple and educational web app to convert English (Gregorian) dates to Bangla (Bengali) dates — built with HTML, Tailwind CSS, and JavaScript.
+A simple and educational web app to convert English dates to Bangla (Bengali) dates — built with HTML, Tailwind CSS, and JavaScript.
 
 ---
 
@@ -15,7 +15,7 @@ A simple and educational web app to convert English (Gregorian) dates to Bangla 
 
 ## 🌐 Live Demo
 
-> <a herf="https://khalidhtoha.github.io/-Bangla-Date-Converter-Web-App/bangla-date.html">Click to Visit
+> <a herf="https://khalidhtoha.github.io/-Bangla-Date-Converter-Web-App/bangla-date.html">Click to Visit</a>
 
 ---
 
